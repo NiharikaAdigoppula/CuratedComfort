@@ -1,0 +1,6 @@
+{
+  "name": "Curated Comfort",
+  "description": "A premium lifestyle magazine and curated inspiration for home decor, workspace design, style, kitchen, organization, and gifts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

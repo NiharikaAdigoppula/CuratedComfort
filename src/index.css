@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Editorial Aesthetic: Cream, Beige, Sage, and Warm Charcoal Browns */
+  --color-brand-cream: #FDFCF9;
+  --color-brand-beige-light: #F0EDE8;
+  --color-brand-beige-medium: #E5E1DA;
+  --color-brand-beige-dark: #A09383;
+  --color-brand-brown-light: #5A524A;
+  --color-brand-brown-dark: #2D2926;
+  --color-brand-sage-light: #F2F4F2;
+  --color-brand-sage-medium: #B8C3B5;
+  --color-brand-sage-dark: #828D7F;
+
+  /* Standard transitions & shadows */
+  --shadow-pinterest: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+  --shadow-pinterest-hover: 0 10px 30px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Custom baseline styling for the premium magazine editorial feel */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-brown-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-beige-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-beige-dark);
+}
+
+/* Base custom interactive states */
+.premium-card-shadow {
+  box-shadow: var(--shadow-pinterest);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.premium-card-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-pinterest-hover);
+}
+
+/* Custom Rich Text Markdown styling helper */
+.magazine-body p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: #4B3E32;
+}
+
+.magazine-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-brand-brown-dark);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.magazine-body h3 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-brand-brown-light);
+  font-weight: 600;
+}
+
+.magazine-body ul, .magazine-body ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.magazine-body li {
+  margin-bottom: 0.5rem;
+  list-style-type: square;
+}
