@@ -177,7 +177,7 @@ export function BlogProvider({ children }: { children: React.ReactNode }) {
   });
 
   const [adminPassword, setAdminPassword] = useState<string>(() => {
-    return localStorage.getItem("cc_admin_pw") || "Niharika*2004#";
+    return localStorage.getItem("cc_admin_pw") || (import.meta as any).env.VITE_ADMIN_PASSWORD || "Niharika*2004#";
   });
 
   // Sync state to localStorage on modification
